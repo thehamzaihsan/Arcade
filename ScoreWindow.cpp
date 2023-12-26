@@ -12,13 +12,14 @@ void ScoreWindow::Start() {
 
 	//TEXT ADD INIT
 	font.loadFromFile("./GeistMonoVF.ttf");
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 9; i++)
 	{
 		text_array[i].setFont(font);
 		text_array[i].setFillColor(sf::Color::White);
 		text_array[i].setCharacterSize(28);
 		text_array[i].setStyle(sf::Text::Bold);
 		text_array[i].setPosition(sf::Vector2f(Primary_Text_Offset, 10.0f));
+		text_array[i].setString("");
 	}
 	text_array[0].setString("Time Elapsed");
 	text_array[1].setPosition(sf::Vector2f(Primary_Text_Offset, 40.0f));
@@ -31,6 +32,7 @@ void ScoreWindow::Start() {
 	text_array[6].setPosition(sf::Vector2f(Primary_Text_Offset, 280.0f));
 	text_array[6].setString("Score");
 	text_array[7].setPosition(sf::Vector2f(Primary_Text_Offset, 310.0f));
+	text_array[8].setPosition(sf::Vector2f(Primary_Text_Offset, 370.0f));
 }
 void ScoreWindow::setScore(int s) {
 	score = s;
@@ -43,6 +45,7 @@ int ScoreWindow::getScore() {
 
 void ScoreWindow::displayTime(bool isWin, bool isExploded, int BlocksBrocken) {
 
+
 	if (isWin != true && isExploded != true)
 	{
 		elapsed = clock.getElapsedTime();
@@ -52,6 +55,12 @@ void ScoreWindow::displayTime(bool isWin, bool isExploded, int BlocksBrocken) {
 		text_array[5].setString((std::to_string(14 * 14)));
 		score = ScoreCalc(BlocksBrocken, 196, elapsedTime);
 		text_array[7].setString(std::to_string(score));
+	}
+	else if (isWin == false && isExploded == true) {
+		text_array[8].setString("YouLose");
+	}
+	else if (isWin == true  && isExploded == false ){
+		text_array[8].setString("YouWin");
 	}
 }
 

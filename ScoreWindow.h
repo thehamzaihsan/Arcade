@@ -18,7 +18,7 @@ private:
 	int score;
 	sf::Clock clock;
 	sf::Time elapsed;
-	sf::Text text_array[8];
+	sf::Text text_array[9];
 	sf::Font font;
 };
 

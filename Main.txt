@@ -1,6 +1,6 @@
 RichTextLabel."Main Text" {
     AutoSize = true;
-    Position = (190, 110);
+    Position = (240, 110);
     Size = (411, 55);
     Text = "Nostalgic Arcade";
     TextSize = 40;
@@ -31,7 +31,7 @@ RichTextLabel."Main Text" {
 }
 
 Button.SignUp {
-    Position = (340, 250);
+    Position = (380, 250);
     Size = (100, 40);
     Text = SignUp;
     TextSize = 20;
@@ -64,7 +64,7 @@ Button.SignUp {
 }
 
 Button.Exit {
-    Position = (340, 310);
+    Position = (380, 310);
     Size = (100, 40);
     Text = Exit;
     TextSize = 20;
@@ -97,7 +97,7 @@ Button.Exit {
 }
 
 Button.LoginButton {
-    Position = (340, 190);
+    Position = (380, 190);
     Size = (100, 40);
     Text = Login;
     TextSize = 20;

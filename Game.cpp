@@ -5,11 +5,7 @@ Game::Game( sf::RenderWindow* window , sf::Event* event)
 {
 	windowp = window;
 	eventp = event;
-	DEBUG = false;
-	FirstMove = true;
-	isWin = false;
-	isExploded = false;
-	removedBlocks = 0;
+
 }
 
 int Game::getscore() {
@@ -19,6 +15,12 @@ int Game::getscore() {
 
 void Game::Start()
 {
+	DEBUG = true;
+	FirstMove = true;
+	isWin = false;
+	isExploded = false;
+	removedBlocks = 0;
+
 	windowp->create(sf::VideoMode(900, 640), "Arcade Simulator");
 	scoreWindow.Start();
 	//windowp->setFramerateLimit(60);
@@ -281,7 +283,7 @@ void Game::Render()
 		}
 	}
 
-	for (int i = 0; i < 8; i++)
+	for (int i = 0; i < 9; i++)
 	{
 		windowp->draw(scoreWindow.getText(i));
 	}

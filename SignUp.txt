@@ -1,6 +1,6 @@
 RichTextLabel."Main Text" {
     AutoSize = true;
-    Position = (190, 80);
+    Position = (220, 80);
     Size = (411, 55);
     Text = "Nostalgic Arcade";
     TextSize = 40;
@@ -31,7 +31,7 @@ RichTextLabel."Main Text" {
 }
 
 Button.SignUp {
-    Position = (340, 390);
+    Position = (370, 390);
     Size = (100, 40);
     Text = SignUp;
     TextSize = 20;
@@ -64,7 +64,7 @@ Button.SignUp {
 }
 
 EditBox.Username {
-    Position = (320, 190);
+    Position = (340, 190);
     Size = (150, 40);
     TextSize = 13;
 
@@ -94,7 +94,7 @@ EditBox.Username {
 
 Label.Label1 {
     AutoSize = true;
-    Position = (320, 160);
+    Position = (340, 170);
     Size = (47, 18);
     Text = Login;
     TextSize = 13;
@@ -129,7 +129,7 @@ Label.Label1 {
 }
 
 EditBox.password {
-    Position = (320, 260);
+    Position = (340, 260);
     Size = (150, 40);
     TextSize = 13;
 
@@ -159,7 +159,7 @@ EditBox.password {
 
 Label.Label2 {
     AutoSize = true;
-    Position = (320, 240);
+    Position = (340, 240);
     Size = (73, 18);
     Text = Password;
     TextSize = 13;
@@ -194,7 +194,7 @@ Label.Label2 {
 }
 
 Button.Back {
-    Position = (340, 450);
+    Position = (370, 450);
     Size = (100, 40);
     Text = Back;
     TextSize = 20;
@@ -227,7 +227,7 @@ Button.Back {
 }
 
 EditBox.ConfirmPassword {
-    Position = (320, 330);
+    Position = (340, 330);
     Size = (150, 40);
     TextSize = 13;
 
@@ -257,7 +257,7 @@ EditBox.ConfirmPassword {
 
 Label.Label3 {
     AutoSize = true;
-    Position = (320, 310);
+    Position = (340, 310);
     Size = (143, 18);
     Text = "Confirm Password";
     TextSize = 13;

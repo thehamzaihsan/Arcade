@@ -31,7 +31,7 @@ RichTextLabel."Main Text" {
 }
 
 Button.HighScores {
-    Position = (50% - 85, 270);
+    Position = (50% - 85, 380);
     Size = (170, 40);
     Text = HighScores;
     TextSize = 20;
@@ -131,10 +131,10 @@ Button.MineSweeper {
 
 Label.Username {
     AutoSize = true;
-    Position = (790, 530);
-    Size = (76, 18);
+    Position = (740, 520);
+    Size = (107, 28);
     Text = Username;
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = transparent;
@@ -167,10 +167,10 @@ Label.Username {
 
 Label.jnjn {
     AutoSize = true;
-    Position = (790, 550);
-    Size = (48, 18);
+    Position = (740, 540);
+    Size = (72, 28);
     Text = Coins;
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = transparent;
@@ -203,10 +203,10 @@ Label.jnjn {
 
 Label.coins {
     AutoSize = true;
-    Position = (840, 550);
-    Size = (20, 17);
+    Position = (830, 540);
+    Size = (30, 26);
     Text = 00;
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = transparent;
@@ -232,5 +232,71 @@ Label.coins {
             ThumbColorHover = #E6E6E6;
             TrackColor = #F5F5F5;
         }
+    }
+}
+
+Button.Bounce1 {
+    Position = (50% - 85, 260);
+    Size = (170, 40);
+    Text = "Bounce L1";
+    TextSize = 20;
+
+    Renderer {
+        BackgroundColor = #F5F5F5;
+        BackgroundColorDisabled = #E6E6E6;
+        BackgroundColorDown = #EBEBEB;
+        BackgroundColorHover = white;
+        BorderColor = #3C3C3C;
+        BorderColorDisabled = #7D7D7D;
+        BorderColorDown = black;
+        BorderColorFocused = #1E1EB4;
+        BorderColorHover = black;
+        Borders = (1, 1, 1, 1);
+        Font = "GeistMonoVF.ttf";
+        TextColor = #3C3C3C;
+        TextColorDisabled = #7D7D7D;
+        TextColorDown = black;
+        TextColorHover = black;
+        TextStyle = Bold;
+        Texture = None;
+        TextureDisabled = None;
+        TextureDown = None;
+        TextureDownFocused = None;
+        TextureDownHover = None;
+        TextureFocused = None;
+        TextureHover = None;
+    }
+}
+
+Button.Bounce2 {
+    Position = (50% - 85, 320);
+    Size = (170, 40);
+    Text = "Bounce L2";
+    TextSize = 20;
+
+    Renderer {
+        BackgroundColor = #F5F5F5;
+        BackgroundColorDisabled = #E6E6E6;
+        BackgroundColorDown = #EBEBEB;
+        BackgroundColorHover = white;
+        BorderColor = #3C3C3C;
+        BorderColorDisabled = #7D7D7D;
+        BorderColorDown = black;
+        BorderColorFocused = #1E1EB4;
+        BorderColorHover = black;
+        Borders = (1, 1, 1, 1);
+        Font = "GeistMonoVF.ttf";
+        TextColor = #3C3C3C;
+        TextColorDisabled = #7D7D7D;
+        TextColorDown = black;
+        TextColorHover = black;
+        TextStyle = Bold;
+        Texture = None;
+        TextureDisabled = None;
+        TextureDown = None;
+        TextureDownFocused = None;
+        TextureDownHover = None;
+        TextureFocused = None;
+        TextureHover = None;
     }
 }
