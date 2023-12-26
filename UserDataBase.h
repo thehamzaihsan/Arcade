@@ -45,9 +45,10 @@ public:
 
 
     void storeAllUsersToFile(const string& filename) {
-        ofstream file(filename, ios::app);  // Open the file in append mode
+        ofstream file(filename, ios::app);
+        clearFileContents(filename);
         if (file.is_open()) {
-            for (const User& user : users) {
+                for (const User& user : users) {
                 file << user.getUsername() << "\n";
                 file << user.getID() << "\n";
                 file << user.getGame1Highscore() << "\n";
@@ -61,6 +62,13 @@ public:
         else {
             cerr << "Unable to open the file.\n";
         }
+    }
+
+
+    void clearFileContents(const std::string& filename) {
+        std::ofstream ofs;
+        ofs.open(filename, std::ofstream::out | std::ofstream::trunc);
+        ofs.close();
     }
 
     void loadAllUsersFromFile(const string& filename) {

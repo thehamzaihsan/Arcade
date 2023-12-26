@@ -67,40 +67,9 @@ public:
         return coins;
     }
 
-    void storeToFile(const string& filename) {
-        ofstream file(filename);
-        if (file.is_open()) {
-            file << username << "\n";
-            file << ID << "\n";
-            file << game1Highscore << "\n";
-            file << game2Highscore << "\n";
-            file << password << "\n";
-            file << coins << "\n";
-            file.close();
-            cout << "User data stored successfully.\n";
-        }
-        else {
-            cerr << "Unable to open the file.\n";
-        }
-    }
+   
 
-    void loadFromFile(const string& filename) {
-        ifstream file(filename);
-        if (file.is_open()) {
-            file >> username;
-            file >> ID;
-            file >> game1Highscore;
-            file >> game2Highscore;
-            file >> password;
-            file >> coins;
-            file.close();
-            cout << "User data loaded successfully.\n";
-        }
 
-        else {
-            cerr << "Unable to open the file.\n";
-        }
-    }
     friend istream& operator>>(istream& is, User& user) {
         is >> user.username;
         is >> user.ID;

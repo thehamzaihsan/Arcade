@@ -109,8 +109,11 @@ public:
 			cout << "Username: " << username << endl;
 			cout << "Password: " << password << endl;
 
+			if (userdatabase.findUser(username) != nullptr)
+			{
 
-			ArcadeMenu(username);
+				ArcadeMenu(username);
+			}
 
 			});
 

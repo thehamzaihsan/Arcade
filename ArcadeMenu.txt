@@ -1,6 +1,6 @@
 RichTextLabel."Main Text" {
     AutoSize = true;
-    Position = (190, 110);
+    Position = (250, 110);
     Size = (411, 55);
     Text = "Nostalgic Arcade";
     TextSize = 40;
@@ -31,7 +31,7 @@ RichTextLabel."Main Text" {
 }
 
 Button.HighScores {
-    Position = (310, 250);
+    Position = (50% - 85, 270);
     Size = (170, 40);
     Text = HighScores;
     TextSize = 20;
@@ -64,7 +64,7 @@ Button.HighScores {
 }
 
 Button.Back {
-    Position = (680, 530);
+    Position = (770, 580);
     Size = (100, 40);
     Text = Back;
     TextSize = 20;
@@ -97,7 +97,7 @@ Button.Back {
 }
 
 Button.MineSweeper {
-    Position = (310, 190);
+    Position = (50% - 85, 200);
     Size = (170, 40);
     Text = MineSweeper;
     TextSize = 20;
@@ -131,7 +131,7 @@ Button.MineSweeper {
 
 Label.Username {
     AutoSize = true;
-    Position = (700, 480);
+    Position = (790, 530);
     Size = (76, 18);
     Text = Username;
     TextSize = 13;
@@ -167,7 +167,7 @@ Label.Username {
 
 Label.jnjn {
     AutoSize = true;
-    Position = (700, 500);
+    Position = (790, 550);
     Size = (48, 18);
     Text = Coins;
     TextSize = 13;
@@ -203,7 +203,7 @@ Label.jnjn {
 
 Label.coins {
     AutoSize = true;
-    Position = (750, 500);
+    Position = (840, 550);
     Size = (20, 17);
     Text = 00;
     TextSize = 13;
