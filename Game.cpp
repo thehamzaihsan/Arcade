@@ -15,7 +15,7 @@ int Game::getscore() {
 
 void Game::Start()
 {
-	DEBUG = true;
+	DEBUG = false;
 	FirstMove = true;
 	isWin = false;
 	isExploded = false;

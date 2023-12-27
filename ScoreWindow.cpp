@@ -58,6 +58,7 @@ void ScoreWindow::displayTime(bool isWin, bool isExploded, int BlocksBrocken) {
 	}
 	else if (isWin == false && isExploded == true) {
 		text_array[8].setString("YouLose");
+		score = 0;
 	}
 	else if (isWin == true  && isExploded == false ){
 		text_array[8].setString("YouWin");
