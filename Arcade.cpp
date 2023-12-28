@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "UserDataBase.h"
 #include "User.h"
+#include <SFML/Audio.hpp>
 
 using namespace tgui;
 using namespace std;
@@ -18,6 +19,15 @@ public:
 		userdatabase.loadAllUsersFromFile("file.txt");
 		currentUserScore = 0;
 		Game1 = false;
+			
+		buffer.loadFromFile("MenuMusic.wav");
+		sound.setBuffer(buffer);
+		sound.play();
+		sound.setLoop(true);
+
+		ClickBuffer.loadFromFile("ClickSound.wav");
+		clickSound.setBuffer(ClickBuffer);
+
 	}
 
 	void run() {
@@ -32,17 +42,13 @@ public:
 				{
 					window.close();
 				}
-
-
 				gui.handleEvent(event);
-
 			}
-
-			cout << "GameStart: " << gamestart << endl;
-			cout << "Game1: " << Game1 << endl;
-
+			
+			
 			if (Game1 == true)
 			{
+				//sound.stop();
 				//cout << "update";
 				if (gamestart == true)
 				{
@@ -54,7 +60,7 @@ public:
 				currentUserScore = Minesweeper.getscore();
 
 			}
-
+	
 
 			window.clear(sf::Color{25 , 25 , 25});
 			gui.draw();
@@ -75,7 +81,7 @@ public:
 		User user = userdatabase.getUserByIndex(ID);
 		gui.loadWidgetsFromFile("HighScore.txt");
 		auto Backf = gui.get<tgui::Button>("Back");
-		Backf->onClick([this, username] { ArcadeMenu(username); });
+		Backf->onClick([this, username] { clickSound.play();  ArcadeMenu(username); });
 		vector<User> users_temp = userdatabase.getAllUsers();
 
 		auto ListView = gui.get<tgui::ListView>("ListView");
@@ -98,6 +104,7 @@ public:
 		gui.loadWidgetsFromFile("ArcadeMenu.txt");
 		auto Back = gui.get<tgui::Button>("Back");
 		Back->onClick([this, username, ID] {
+			clickSound.play();
 
 			if (Game1 == true)
 			{
@@ -118,6 +125,7 @@ public:
 
 		auto HighScoreButton = gui.get<tgui::Button>("HighScores");
 		HighScoreButton->onClick([this, username] {
+			clickSound.play();
 			if (Game1 == false)
 			{
 				HighScore(username);
@@ -127,7 +135,7 @@ public:
 			});
 		auto GamePlay1 = gui.get<tgui::Button>("MineSweeper");
 		GamePlay1->onClick([this, username, coins, ID] {
-
+			clickSound.play();
 			if (Game1 == false)
 			{
 
@@ -142,6 +150,7 @@ public:
 		auto BounceL1 = gui.get<tgui::Button>("Bounce1");
 
 		BounceL1->onClick([this, username, coins, ID] {
+			clickSound.play();
 			if (Game1 == false)
 			{
 
@@ -158,7 +167,7 @@ public:
 		auto BounceL2 = gui.get<tgui::Button>("Bounce2");
 
 		BounceL2->onClick([this, username, coins, ID] {
-
+			clickSound.play();
 			if (Game1 == false)
 			{
 				User usern = userdatabase.getUserByIndex(ID);
@@ -195,7 +204,7 @@ public:
 
 		auto LoginButton = gui.get<tgui::Button>("Login");
 		LoginButton->onClick([this, usernameBox, passwordBox, Warning1] {
-
+			clickSound.play();
 			std::string username = usernameBox->getText().toStdString();
 			std::string password = passwordBox->getText().toStdString();
 
@@ -223,7 +232,7 @@ public:
 			});
 
 		auto Back = gui.get<tgui::Button>("Back");
-		Back->onClick([&] { MainPage(); });
+		Back->onClick([&] { clickSound.play();  MainPage(); });
 	}
 
 
@@ -240,7 +249,7 @@ public:
 
 		auto SignUpButton = gui.get<tgui::Button>("SignUp");
 		SignUpButton->onClick([this, usernameBox, passwordBox, ConfpasswordBox, Warning1, Warning2] {
-
+			clickSound.play();
 			std::string username = usernameBox->getText().toStdString();
 			std::string password = passwordBox->getText().toStdString();
 			std::string ConfPassword = ConfpasswordBox->getText().toStdString();
@@ -269,20 +278,20 @@ public:
 			});
 
 		auto Back = gui.get<tgui::Button>("Back");
-		Back->onClick([this] { MainPage(); });
+		Back->onClick([this] { clickSound.play();  MainPage(); });
 	}
 
 
 	void MainPage() {
 		gui.loadWidgetsFromFile("Main.txt");
 		auto LoginButton = gui.get<tgui::Button>("LoginButton");
-		LoginButton->onClick([&] { LoginPage(); });
+		LoginButton->onClick([&] { clickSound.play(); LoginPage(); });
 		auto SignUpButton = gui.get<tgui::Button>("SignUp");
-		SignUpButton->onClick([&] { SignUpPage(); });
+		SignUpButton->onClick([&] { clickSound.play();  SignUpPage(); });
 		auto Exit = gui.get<tgui::Button>("Exit");
 		Exit->onClick([&] {
+			clickSound.play();
 			window.close();
-
 			});
 	}
 
@@ -298,6 +307,10 @@ private:
 	UserDatabase userdatabase;
 	int currentUserScore;
 	bool  gamestart;
+	sf::SoundBuffer buffer;
+	sf::Sound sound;
+	sf::SoundBuffer ClickBuffer;
+	sf::Sound clickSound;
 };
 
 int main() {

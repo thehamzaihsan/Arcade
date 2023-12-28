@@ -1,37 +1,5 @@
-RichTextLabel."Main Text" {
-    AutoSize = true;
-    Position = (220, 80);
-    Size = (411, 55);
-    Text = "Nostalgic Arcade";
-    TextSize = 40;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowUp = None;
-            TextureThumb = None;
-            TextureTrack = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
-    }
-}
-
 Button.SignUp {
-    Position = (370, 390);
+    Position = (50% - (100 / 2), 420);
     Size = (100, 40);
     Text = SignUp;
     TextSize = 20;
@@ -64,9 +32,10 @@ Button.SignUp {
 }
 
 EditBox.Username {
-    Position = (340, 190);
+    DefaultText = Login;
+    Position = (50% - (150 / 2), 250);
     Size = (150, 40);
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = #F5F5F5;
@@ -89,49 +58,14 @@ EditBox.Username {
         TextureDisabled = None;
         TextureFocused = None;
         TextureHover = None;
-    }
-}
-
-Label.Label1 {
-    AutoSize = true;
-    Position = (340, 170);
-    Size = (47, 18);
-    Text = Login;
-    TextSize = 13;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowDownHover = None;
-            TextureArrowUp = None;
-            TextureArrowUpHover = None;
-            TextureThumb = None;
-            TextureThumbHover = None;
-            TextureTrack = None;
-            TextureTrackHover = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
     }
 }
 
 EditBox.password {
-    Position = (340, 260);
+    DefaultText = Password;
+    Position = (50% - (150 / 2), 300);
     Size = (150, 40);
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = #F5F5F5;
@@ -157,44 +91,8 @@ EditBox.password {
     }
 }
 
-Label.Label2 {
-    AutoSize = true;
-    Position = (340, 240);
-    Size = (73, 18);
-    Text = Password;
-    TextSize = 13;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowDownHover = None;
-            TextureArrowUp = None;
-            TextureArrowUpHover = None;
-            TextureThumb = None;
-            TextureThumbHover = None;
-            TextureTrack = None;
-            TextureTrackHover = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
-    }
-}
-
 Button.Back {
-    Position = (370, 450);
+    Position = (50% - (100 / 2), 480);
     Size = (100, 40);
     Text = Back;
     TextSize = 20;
@@ -227,9 +125,10 @@ Button.Back {
 }
 
 EditBox.ConfirmPassword {
-    Position = (340, 330);
+    DefaultText = "Confirm Password";
+    Position = (50% - (150 / 2), 350);
     Size = (150, 40);
-    TextSize = 13;
+    TextSize = 20;
 
     Renderer {
         BackgroundColor = #F5F5F5;
@@ -255,47 +154,11 @@ EditBox.ConfirmPassword {
     }
 }
 
-Label.Label3 {
-    AutoSize = true;
-    Position = (340, 310);
-    Size = (143, 18);
-    Text = "Confirm Password";
-    TextSize = 13;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowDownHover = None;
-            TextureArrowUp = None;
-            TextureArrowUpHover = None;
-            TextureThumb = None;
-            TextureThumbHover = None;
-            TextureTrack = None;
-            TextureTrackHover = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
-    }
-}
-
 Label.Warning1 {
     AutoSize = true;
     Enabled = false;
     Position = (320, 540);
-    Size = (147, 18);
+    Size = (95, 18);
     Text = UserAlreadyExist;
     TextSize = 13;
     Visible = false;
@@ -333,7 +196,7 @@ Label.Warning2 {
     AutoSize = true;
     Enabled = false;
     Position = (290, 560);
-    Size = (215, 18);
+    Size = (141, 18);
     Text = "Password does not match.";
     TextSize = 13;
     Visible = false;
@@ -364,5 +227,15 @@ Label.Warning2 {
             ThumbColorHover = #E6E6E6;
             TrackColor = #F5F5F5;
         }
+    }
+}
+
+Picture.Picture1 {
+    Position = (50% - (570 / 2), 45);
+    Size = (570, 200);
+
+    Renderer {
+        Texture = "1990564_1.jpg" Smooth;
+        TransparentTexture = false;
     }
 }

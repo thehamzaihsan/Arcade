@@ -1,37 +1,5 @@
-RichTextLabel."Main Text" {
-    AutoSize = true;
-    Position = (250, 110);
-    Size = (411, 55);
-    Text = "Nostalgic Arcade";
-    TextSize = 40;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowUp = None;
-            TextureThumb = None;
-            TextureTrack = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
-    }
-}
-
 Button.HighScores {
-    Position = (50% - 85, 380);
+    Position = (50% - 85, 420);
     Size = (170, 40);
     Text = HighScores;
     TextSize = 20;
@@ -97,7 +65,7 @@ Button.Back {
 }
 
 Button.MineSweeper {
-    Position = (50% - 85, 200);
+    Position = (50% - 85, 240);
     Size = (170, 40);
     Text = MineSweeper;
     TextSize = 20;
@@ -132,7 +100,7 @@ Button.MineSweeper {
 Label.Username {
     AutoSize = true;
     Position = (740, 520);
-    Size = (107, 28);
+    Size = (73, 27);
     Text = Username;
     TextSize = 20;
 
@@ -168,7 +136,7 @@ Label.Username {
 Label.jnjn {
     AutoSize = true;
     Position = (740, 540);
-    Size = (72, 28);
+    Size = (41, 27);
     Text = Coins;
     TextSize = 20;
 
@@ -236,7 +204,7 @@ Label.coins {
 }
 
 Button.Bounce1 {
-    Position = (50% - 85, 260);
+    Position = (50% - 85, 300);
     Size = (170, 40);
     Text = "Bounce L1";
     TextSize = 20;
@@ -269,7 +237,7 @@ Button.Bounce1 {
 }
 
 Button.Bounce2 {
-    Position = (50% - 85, 320);
+    Position = (50% - 85, 360);
     Size = (170, 40);
     Text = "Bounce L2";
     TextSize = 20;
@@ -298,5 +266,15 @@ Button.Bounce2 {
         TextureDownHover = None;
         TextureFocused = None;
         TextureHover = None;
+    }
+}
+
+Picture.Picture1 {
+    Position = (50% - (570 / 2), 20);
+    Size = (570, 200);
+
+    Renderer {
+        Texture = "1990564_1.jpg" Smooth;
+        TransparentTexture = false;
     }
 }

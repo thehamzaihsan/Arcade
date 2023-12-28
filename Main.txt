@@ -1,5 +1,5 @@
 Button.SignUp {
-    Position = (400, 350);
+    Position = (50% - (100 / 2), 350);
     Size = (100, 40);
     Text = SignUp;
     TextSize = 20;
@@ -32,7 +32,7 @@ Button.SignUp {
 }
 
 Button.Exit {
-    Position = (400, 420);
+    Position = (50% - (100 / 2), 420);
     Size = (100, 40);
     Text = Exit;
     TextSize = 20;
@@ -65,7 +65,7 @@ Button.Exit {
 }
 
 Button.LoginButton {
-    Position = (400, 290);
+    Position = (50% - (100 / 2), 290);
     Size = (100, 40);
     Text = Login;
     TextSize = 20;
@@ -98,7 +98,7 @@ Button.LoginButton {
 }
 
 Picture.Picture1 {
-    Position = (50% - (570 / 2), 51.1429);
+    Position = (50% - (570 / 2), 51);
     Size = (570, 200);
 
     Renderer {

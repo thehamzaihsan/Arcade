@@ -1,35 +1,3 @@
-RichTextLabel."Main Text" {
-    AutoSize = true;
-    Position = (250, 110);
-    Size = (411, 55);
-    Text = "Nostalgic Arcade";
-    TextSize = 40;
-
-    Renderer {
-        BackgroundColor = transparent;
-        BorderColor = #3C3C3C;
-        Borders = (0, 0, 0, 0);
-        Font = "GeistMonoVF.ttf";
-        TextColor = white;
-        TextStyle = Bold;
-        TextureBackground = None;
-
-        Scrollbar {
-            ArrowBackgroundColor = #F5F5F5;
-            ArrowBackgroundColorHover = white;
-            ArrowColor = #3C3C3C;
-            ArrowColorHover = black;
-            TextureArrowDown = None;
-            TextureArrowUp = None;
-            TextureThumb = None;
-            TextureTrack = None;
-            ThumbColor = #DCDCDC;
-            ThumbColorHover = #E6E6E6;
-            TrackColor = #F5F5F5;
-        }
-    }
-}
-
 Button.Back {
     Position = (770, 580);
     Size = (100, 40);
@@ -66,7 +34,7 @@ Button.Back {
 Label.Username {
     AutoSize = true;
     Position = (740, 520);
-    Size = (107, 28);
+    Size = (73, 27);
     Text = Username;
     TextSize = 20;
 
@@ -102,7 +70,7 @@ Label.Username {
 Label.jnjn {
     AutoSize = true;
     Position = (740, 540);
-    Size = (72, 28);
+    Size = (41, 27);
     Text = Coins;
     TextSize = 20;
 
@@ -231,5 +199,15 @@ ListView.ListView {
         Expanded = true;
         Text = HighScore;
         Width = 50;
+    }
+}
+
+Picture.Picture1 {
+    Position = (50% - (470 / 2), 10);
+    Size = (470, 164.912);
+
+    Renderer {
+        Texture = "1990564_1.jpg" Smooth;
+        TransparentTexture = false;
     }
 }
