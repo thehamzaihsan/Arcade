@@ -56,7 +56,7 @@ public:
 			}
 
 
-			window.clear(sf::Color::Black);
+			window.clear(sf::Color{25 , 25 , 25});
 			gui.draw();
 			if (Game1 == true)
 			{
